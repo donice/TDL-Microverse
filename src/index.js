@@ -14,7 +14,7 @@ const tasks = [
 ];
 
 const fillList = () => {
-  const container = document.querySelector('.todo-list');
+  const container = document.querySelector("'.todo-list'");
   tasks.forEach((todo) => {
     container.innerHTML += `<li>
     <div class="taskCont">
