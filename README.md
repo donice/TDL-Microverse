@@ -1,3 +1,4 @@
+# To-Do-List
 <a name="readme-top"></a>
 
 <!-- TABLE OF CONTENTS -->
@@ -8,6 +9,8 @@
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
+  - [🚀 Live Demo](#live-demo)
+  - [💻 Awesome books Presentation](#vgs-presentation)
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
   - [Prerequisites](#prerequisites)
@@ -25,16 +28,14 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 To Do list: list structure <a name="about-project"></a>
+# 📖 Awesome books <a name="about-project"></a>
 
-> In this project, I will build a simple HTML list of To Do tasks. The list will be styled according to the specifications listed later in this lesson. This simple web page will be built using webpack and served by a webpack dev server.
-
+> In this project, We build a basic website that allows users to add/remove books from a list. We achieve that by using JavaScript objects and arrays. We dynamically modify the DOM and add basic events.
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
 
 > This project uses the following stack :
-
 <details>
   <summary>Client</summary>
   <ul>
@@ -49,19 +50,35 @@
 ### Key Features <a name="key-features"></a>
 
 > Here are some key features of the application :
-
-- **Structure list**
-*
+- **Add book**
+- **Remove book**
+- **Display books**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+<!-- LIVE DEMO -->
+
+## 🚀 Live Demo <a name="live-demo"></a>
+
+> Here you can visit my live demo :
+- [N/A]()
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- LIVE DEMO -->
+
+## 💻 Awesome books <a name="vgs-presentation"></a>
+
+> Here you can see my presentation :
+- [N/A]()
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- GETTING STARTED -->
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
 > Clone the repository by clicking on the 'Code' button and copy the link
-
 To get a local copy up and running, follow these steps.
 
 ### Prerequisites
@@ -78,7 +95,7 @@ Example commands:
 
 ```sh
   cd my-folder
-  git clone https://github.com/alex1779/to-do-list-v3.git
+  git clone https://github.com/donice/TDL-Microverse
 ```
 
 -
@@ -89,7 +106,6 @@ Install this project with:
 
 <!--
 Example command:
-
 ```sh
   cd my-project
   gem install
@@ -103,7 +119,6 @@ Open the index.html file in a web browser
 
 <!--
 Example command:
-
 ```sh
   rails server
 ```
@@ -140,9 +155,7 @@ You can deploy this project using:
 
 <!--
 Example:
-
 ```sh
-
 ```
  -->
 
@@ -150,13 +163,12 @@ Example:
 
 <!-- AUTHORS -->
 
-## 👥 Author <a name="author"></a>
+## 👥 Authors <a name="authors"></a>
 
-👤 **Alejandro Maggioni**
-
-- GitHub: [@githubhandle](https://github.com/alex1779/)
-- Twitter: [@twitterhandle](https://twitter.com/alex1779)
-- LinkedIn: [LinkedIn](https://www.linkedin.com/in/alejandro-maggioni-086678b5/)
+👤 **Donice Ubaru**
+- GitHub: [@donice](https://github.com/donice/)
+- Twitter: [@drdonice](https://twitter.com/drdonice)
+- LinkedIn: [Donice Ubaru](https://www.linkedin.com/in/doniceubaru/)
 
 
 
@@ -166,8 +178,8 @@ Example:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- Delete options
-
+- Contact Information
+- Navigation bar
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -202,5 +214,4 @@ I would like to thank the Microverse team.
 
 This project is [licensed](./LICENSE) .
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-# TDL-Microverse
+<p align="right">(<a href="#readme-top">back to top</a>)</p># To-Do-List-Microverse
