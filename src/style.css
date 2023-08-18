@@ -8,16 +8,14 @@
   margin: 0 auto;
   width: 320px;
   box-shadow: 0 0 10px lightgrey;
-  background-color: rgb(224, 230, 230);
-  cursor: pointer;
+  background-color: #fff;
 }
 
 h1,
 header,
 label,
 input,
-li,
-.taskCont {
+li {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -27,7 +25,18 @@ li,
   font-weight: 100;
   height: 40px;
   padding-inline: 5px;
-  background-color: white;
+  background-color: transparent;
+}
+
+input {
+  border: none !important;
+  outline: none;
+  background: transparent;
+  box-shadow: none;
+  overflow: hidden;
+  resize: none;
+  padding: 0 40px 0 1rem;
+  font-style: italic;
 }
 
 ul {
@@ -38,4 +47,64 @@ ul {
 #clearAll {
   background-color: transparent;
   border: none;
+  color: black;
+  cursor: pointer;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  opacity: 0.5;
+}
+
+.taskCont {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px #d9dde2 solid;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 100;
+  height: 40px;
+  padding-inline: 5px;
+  background-color: transparent;
+}
+
+.task {
+  width: 100%;
+  line-height: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 50px;
+  padding-left: 10px;
+  color: black;
+  word-wrap: break-word;
+  border: none !important;
+  cursor: default;
+}
+
+.textArea {
+  width: 100%;
+  line-height: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 50px;
+  padding-left: 10px;
+  display: none;
+  outline: none;
+  background: transparent;
+  box-shadow: none;
+  overflow: hidden;
+  resize: none;
+  height: 20px;
+  text-align: start;
+  border: none !important;
+}
+
+.icon {
+  height: 100%;
+  aspect-ratio: 1 / 1;
+  text-align: center;
+  line-height: 20px;
+  font-size: 20px;
+  padding-top: 15px;
+  cursor: pointer;
 }
