@@ -5,29 +5,20 @@ module.exports = {
 
   mode: 'development',
 
-  entry: {
-    index: './src/index.js',
-  },
+plugins: [
+  new HtmlWebpackPlugin({
+   title: 'Output Management',
+   template: './src/index.html',
+  }),
+],
 
-  plugins: [
-    new HtmlWebpackPlugin({
-      template: './src/index.html',
-    }),
-
-  ],
-
-  devServer: {
-    static: './dist',
-  },
   output: {
 
-    filename: '[name].bundle.js',
+    filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist'),
   },
 
-  optimization: {
-    runtimeChunk: 'single',
-  },
+
 
   module: {
     rules: [
