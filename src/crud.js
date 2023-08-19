@@ -20,7 +20,9 @@ const clearCompletedTodos = () => {
     });
   }
   existingTodos = existingTodos.filter((todos) => todos.completed === false);
-  existingTodos.forEach((task, i) => (task.index = i + 1));
+  existingTodos.forEach((task, i) => {
+    (task.index = i + 1)
+  });
   localStorage.setItem('todos', JSON.stringify(existingTodos));
 };
 
@@ -161,7 +163,9 @@ const deleteTodos = (e) => {
   let existingTodos = JSON.parse(localStorage.getItem('todos'));
   existingTodos = existingTodos.filter((todos, index) => index !== id);
   removeBtn.parentNode.remove();
-  existingTodos.forEach((task, i) => (task.index = i + 1));
+  existingTodos.forEach((task, i) => {
+    task.index = i + 1;
+  });  
   localStorage.setItem('todos', JSON.stringify(existingTodos));
   createTodos();
 };
