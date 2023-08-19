@@ -10,19 +10,6 @@ class Todo {
   }
 }
 
-const deleteTodos = (e) => {
-  const removeBtn = e.target;
-  const btnClass = removeBtn.className;
-  const btnId = btnClass.split('-');
-  const id = parseInt(btnId[1], 10);
-  let existingTodos = JSON.parse(localStorage.getItem('todos'));
-  existingTodos = existingTodos.filter((todos, index) => index !== id);
-  removeBtn.parentNode.remove();
-  existingTodos.forEach((task, i) => (task.index = i + 1));
-  localStorage.setItem('todos', JSON.stringify(existingTodos));
-  createTodos();
-};
-
 const clearCompletedTodos = () => {
   const completed = document.querySelectorAll('input:checked');
   let existingTodos = JSON.parse(localStorage.getItem('todos'));
@@ -164,6 +151,19 @@ const createTodos = () => {
   } else {
     document.querySelector('.todo-container').innerHTML = '';
   }
+};
+
+const deleteTodos = (e) => {
+  const removeBtn = e.target;
+  const btnClass = removeBtn.className;
+  const btnId = btnClass.split('-');
+  const id = parseInt(btnId[1], 10);
+  let existingTodos = JSON.parse(localStorage.getItem('todos'));
+  existingTodos = existingTodos.filter((todos, index) => index !== id);
+  removeBtn.parentNode.remove();
+  existingTodos.forEach((task, i) => (task.index = i + 1));
+  localStorage.setItem('todos', JSON.stringify(existingTodos));
+  createTodos();
 };
 
 const storeTodos = (e) => {
