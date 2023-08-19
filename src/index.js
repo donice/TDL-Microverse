@@ -1,29 +1,8 @@
 import './style.css';
+import * as todos from './crud.js';
 
-const tasks = [
-  {
-    index: 0,
-    completed: false,
-    description: 'review this project',
-  },
-  {
-    index: 1,
-    completed: true,
-    description: 'aprobe this project',
-  },
-];
+document.querySelector('.enter').addEventListener('click', todos.storeTodos);
+document.querySelector('form').addEventListener('submit', todos.storeTodos);
+document.querySelector('button').addEventListener('click', todos.clearCompletedTodos);
 
-const fillList = () => {
-  const container = document.querySelector('.todo-list');
-  tasks.forEach((todo) => {
-    container.innerHTML += `<li>
-    <div class="taskCont">
-      <input type="checkbox">
-      <div class="task">${todo.description}</div>
-    </div>
-    <div class="icon">&#8942</div>
-  </li>
-`;
-  });
-};
-fillList();
+window.addEventListener('load', todos.createTodos);

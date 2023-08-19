@@ -1,28 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ToDoList by Alejandro Maggioni</title>
-  <link rel="stylesheet" href="./style.css">
-<script defer src="runtime.bundle.js"></script><script defer src="index.bundle.js"></script></head>
-
-<body>
-  <div class="container">
-    <header>
-      <h1>Today's To Do </h1>
-      <div>&#128472</div>
-    </header>
-    <label for="inputNewTask">
-      <input type="text" id="inputNewTask" class="outlinenone" placeholder="Add to your list...">
-      <div id="btnNewTask">&#8629 </div>
-    </label>
-    <ul id="contenedorTasks" class="todo-list">
-    </ul>
-    <button id="clearAll" class="clearAll">Clear all completed</button>
-  </div>
-  <script src="./index.js"></script>
-</body>
-
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <script
+      src="https://kit.fontawesome.com/d31edfa6bf.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Todo List</title>
+    <script defer="defer" src="bundle.js"></script>
+  </head>
+  <body>
+    <main class="main">
+      <div class="title">
+        <h3>Today's To Do</h3>
+        <span><i class="fa fa-refresh"></i></span>
+      </div>
+      <form class="form-element">
+        <input
+          id="description"
+          name="description"
+          class="input"
+          placeholder="Add to your list..."
+          required
+        />
+        <span class="enter"><i class="fa fa-level-down down"></i></span>
+      </form>
+      <div class="todo-container"></div>
+      <div class="clear">
+        <button type="button" class="button">Clear all completed</button>
+      </div>
+    </main>
+  </body>
 </html>
