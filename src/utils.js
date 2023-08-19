@@ -32,7 +32,7 @@ function scrapeAndSave() {
   });
   localStorage.removeItem('tasksList');
   localStorage.setItem('tasksList', JSON.stringify(tasksArray));
-  let storedTasks = localStorage.getItem('tasksList');
+  const storedTasks = localStorage.getItem('tasksList');
   if (storedTasks) {
     tasksArray = JSON.parse(storedTasks);
   }
