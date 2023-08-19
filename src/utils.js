@@ -32,6 +32,10 @@ function scrapeAndSave() {
   });
   localStorage.removeItem('tasksList');
   localStorage.setItem('tasksList', JSON.stringify(tasksArray));
+  var storedTasks = localStorage.getItem('tasksList');
+  if (storedTasks) {
+    tasksArray = JSON.parse(storedTasks);
+  }
 }
 
 function setValueTextArea(textArea, labelTask) {
@@ -61,13 +65,19 @@ export function addEventclearAllButton() {
   const buttonClearAll = document.querySelector('.clearAll');
   buttonClearAll.addEventListener('click', () => {
     setValueTextAreaAlls();
+
     const liElements = document.querySelectorAll('li');
-    liElements.forEach((liElem) => {
+    const liElementsToKeep = Array.from(liElements).filter((liElem) => {
       const checkboxElem = liElem.querySelector('.checkBoxesTasks');
-      if (checkboxElem.checked) {
+      return !checkboxElem.checked;
+    });
+
+    liElements.forEach((liElem) => {
+      if (!liElementsToKeep.includes(liElem)) {
         liElem.remove();
       }
     });
+
     scrapeAndSave();
   });
 }
