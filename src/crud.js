@@ -66,6 +66,20 @@ const completedTodos = (e) => {
     localStorage.setItem('todos', JSON.stringify(existingTodos));
   }
 };
+const deleteTodoItem = (e) => {
+  const removeBtn = e.target;
+  const btnClass = removeBtn.className;
+  const btnId = btnClass.split('-');
+  const id = parseInt(btnId[1], 10);
+  let existingTodos = JSON.parse(localStorage.getItem('todos'));
+  existingTodos = existingTodos.filter((todos, index) => index !== id);
+  removeBtn.parentNode.remove();
+  existingTodos.forEach((task, i) => {
+    task.index = i + 1;
+  });
+  localStorage.setItem('todos', JSON.stringify(existingTodos));
+  createTodos();
+};
 
 const editTodos = (e) => {
   const editInput = e.target;
@@ -94,7 +108,7 @@ const editTodos = (e) => {
   task.appendChild(removeBtn);
 
   document.querySelectorAll(`.delete-${editInput.id}`).forEach((e) => {
-    e.addEventListener('click', deleteTodos);
+    e.addEventListener('click', deleteTodoItem);
   });
 
   document.querySelectorAll(`.save-${editInput.id}`).forEach((e) => {
