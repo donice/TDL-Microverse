@@ -21,7 +21,7 @@ const clearCompletedTodos = () => {
   }
   existingTodos = existingTodos.filter((todos) => todos.completed === false);
   existingTodos.forEach((task, i) => {
-    (task.index = i + 1)
+    (task.index = i + 1);
   });
   localStorage.setItem('todos', JSON.stringify(existingTodos));
 };
@@ -165,7 +165,7 @@ const deleteTodos = (e) => {
   removeBtn.parentNode.remove();
   existingTodos.forEach((task, i) => {
     task.index = i + 1;
-  });  
+  });
   localStorage.setItem('todos', JSON.stringify(existingTodos));
   createTodos();
 };
