@@ -22,7 +22,7 @@ function restoreBackgroundWhite() {
 }
 
 function scrapeAndSave() {
-  const tasksArray = [];
+  let tasksArray = [];
   const tasks = document.querySelectorAll('.task');
   tasks.forEach((label, index) => {
     const parentTaskCont = label.parentNode;
@@ -32,7 +32,7 @@ function scrapeAndSave() {
   });
   localStorage.removeItem('tasksList');
   localStorage.setItem('tasksList', JSON.stringify(tasksArray));
-  var storedTasks = localStorage.getItem('tasksList');
+  let storedTasks = localStorage.getItem('tasksList');
   if (storedTasks) {
     tasksArray = JSON.parse(storedTasks);
   }
