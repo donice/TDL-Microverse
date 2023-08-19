@@ -10,58 +10,6 @@ class Todo {
   }
 }
 
-const createTodos = () => {
-  const existingTodos = JSON.parse(localStorage.getItem('todos'));
-  if (existingTodos !== null && existingTodos.length > 0) {
-    const todoContainer = document.querySelector('.todo-container');
-    todoContainer.innerHTML = '';
-
-    existingTodos.forEach((todo, index) => {
-      const taskList = document.createElement('div');
-      const task = document.createElement('div');
-
-      taskList.classList.add('tasks');
-      taskList.id = `tasks-${index}`;
-
-      task.classList.add('task');
-      task.id = `task-${index}`;
-
-      const input = document.createElement('input');
-      input.type = 'checkbox';
-      input.classList.add('checkbox');
-      input.id = `checkbox-${index}`;
-
-      const item = document.createElement('input');
-      item.type = 'text';
-      item.classList.add('item');
-      item.setAttribute('readonly', true);
-      item.value = `${todo.description}`;
-      item.id = `complete-${index}`;
-
-      const edit = document.createElement('img');
-      edit.setAttribute('src', dots);
-      edit.classList.add('edit');
-      edit.id = index;
-
-      todoContainer.appendChild(taskList);
-      taskList.appendChild(task);
-      task.appendChild(input);
-      task.appendChild(item);
-
-      task.appendChild(edit);
-    });
-
-    document.querySelectorAll('.edit').forEach((e) => {
-      e.addEventListener('click', editTodos);
-    });
-
-    document.querySelectorAll('.checkbox').forEach((e) => {
-      e.addEventListener('change', completedTodos);
-    });
-  } else {
-    document.querySelector('.todo-container').innerHTML = '';
-  }
-};
 const deleteTodos = (e) => {
   const removeBtn = e.target;
   const btnClass = removeBtn.className;
@@ -165,6 +113,58 @@ const editTodos = (e) => {
   });
 };
 
+const createTodos = () => {
+  const existingTodos = JSON.parse(localStorage.getItem('todos'));
+  if (existingTodos !== null && existingTodos.length > 0) {
+    const todoContainer = document.querySelector('.todo-container');
+    todoContainer.innerHTML = '';
+
+    existingTodos.forEach((todo, index) => {
+      const taskList = document.createElement('div');
+      const task = document.createElement('div');
+
+      taskList.classList.add('tasks');
+      taskList.id = `tasks-${index}`;
+
+      task.classList.add('task');
+      task.id = `task-${index}`;
+
+      const input = document.createElement('input');
+      input.type = 'checkbox';
+      input.classList.add('checkbox');
+      input.id = `checkbox-${index}`;
+
+      const item = document.createElement('input');
+      item.type = 'text';
+      item.classList.add('item');
+      item.setAttribute('readonly', true);
+      item.value = `${todo.description}`;
+      item.id = `complete-${index}`;
+
+      const edit = document.createElement('img');
+      edit.setAttribute('src', dots);
+      edit.classList.add('edit');
+      edit.id = index;
+
+      todoContainer.appendChild(taskList);
+      taskList.appendChild(task);
+      task.appendChild(input);
+      task.appendChild(item);
+
+      task.appendChild(edit);
+    });
+
+    document.querySelectorAll('.edit').forEach((e) => {
+      e.addEventListener('click', editTodos);
+    });
+
+    document.querySelectorAll('.checkbox').forEach((e) => {
+      e.addEventListener('change', completedTodos);
+    });
+  } else {
+    document.querySelector('.todo-container').innerHTML = '';
+  }
+};
 
 const storeTodos = (e) => {
   e.preventDefault();
